@@ -6,49 +6,60 @@ import 'package:supermarket_deliveryagent_fe/core/utils/navigations.dart';
 import 'package:supermarket_deliveryagent_fe/views/home/dashedline.dart';
 import 'package:supermarket_deliveryagent_fe/views/map/location.dart';
 
-class HomeOrderCard extends StatelessWidget {
-  const HomeOrderCard({super.key});
+class ProcessingOrderCard extends StatelessWidget {
+  const ProcessingOrderCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       color: AppColors.white,
-      margin: const EdgeInsets.only(bottom: 12),
+      margin: const EdgeInsets.all(12),
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'John Doe',
-              style: GoogleFonts.inter(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: AppColors.black,
-              ),
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'order_no #552214566',
+                  "John Doe",
                   style: GoogleFonts.inter(
                     fontSize: 14,
-                    color: AppColors.grey,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.black,
                   ),
                 ),
-                InkWell(
-                  onTap: () {
-                    pushNavigation(context, const DeliveryTrackingScreen());
-                  },
-                  child: Image.asset(
-                    AppAssets.arrowIcon,
-                    width: 50,
-                    height: 50,
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      "1.5 km",
+                      style: GoogleFonts.inter(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.black,
+                      ),
+                    ),
+                    SizedBox(width: 4),
+                    Text(
+                      "Left",
+                      style: GoogleFonts.inter(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.black,
+                      ),
+                    ),
+                  ],
                 ),
               ],
+            ),
+            Text(
+              "order_no #552214566",
+              style: GoogleFonts.inter(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: AppColors.grey,
+              ),
             ),
             const SizedBox(height: 8),
             Row(
@@ -110,42 +121,66 @@ class HomeOrderCard extends StatelessWidget {
             ),
 
             const SizedBox(height: 12),
-            Divider(color: AppColors.grey),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                InkWell(
-                  onTap: () {},
-                  child: Row(
-                    children: [
-                      Image.asset(AppAssets.acceptIcon, width: 20, height: 20),
-                      Text(
-                        'Accept',
-                        style: GoogleFonts.inter(
-                          fontSize: 14,
-                          color: AppColors.black,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(Icons.call),
+                  label: Text(
+                    "Call",
+                    style: GoogleFonts.inter(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(6),
+                      side: BorderSide(color: AppColors.black),
+                    ),
+                    backgroundColor: AppColors.white,
+                    foregroundColor: AppColors.black,
                   ),
                 ),
-
-                Container(height: 20, width: 1.5, color: AppColors.grey),
-                InkWell(
-                  onTap: () {},
-                  child: Row(
-                    children: [
-                      Image.asset(AppAssets.rejectIcon, width: 20, height: 20),
-                      Text(
-                        'Reject',
-                        style: GoogleFonts.inter(
-                          fontSize: 14,
-                          color: AppColors.black,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
+                ElevatedButton.icon(
+                  onPressed: () {
+                    pushNavigation(context, const DeliveryTrackingScreen());
+                  },
+                  icon: Icon(Icons.navigation),
+                  label: Text(
+                    "Navigate",
+                    style: GoogleFonts.inter(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(6),
+                      side: BorderSide(color: AppColors.black),
+                    ),
+                    backgroundColor: AppColors.white,
+                    foregroundColor: AppColors.black,
+                  ),
+                ),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(Icons.done),
+                  label: Text(
+                    "Delivered",
+                    style: GoogleFonts.inter(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(6),
+                      side: BorderSide(color: AppColors.black),
+                    ),
+                    backgroundColor: AppColors.white,
+                    foregroundColor: AppColors.black,
                   ),
                 ),
               ],

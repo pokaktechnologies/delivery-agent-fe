@@ -17,5 +17,6 @@ class AppColors {
   static const green = Colors.green;
   static const orange = Colors.orange;
   static const Color cloudGrey = Color(0xFFECF0F1);
-  static const Color mintGreen = Color(0xFF27AE60); // Same as #27AE60
+
+  static const mintGreen = const Color.fromARGB(255, 219, 255, 228);
 }

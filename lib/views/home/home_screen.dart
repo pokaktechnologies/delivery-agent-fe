@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:supermarket_deliveryagent_fe/core/theme/app_assets.dart';
 import 'package:supermarket_deliveryagent_fe/core/theme/app_colors.dart';
 import 'package:supermarket_deliveryagent_fe/views/home/orderlist_screen.dart';
@@ -24,19 +25,22 @@ class HomePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         'Hello, Alan!',
-                        style: TextStyle(
+                        style: GoogleFonts.inter(
                           fontSize: 24,
                           color: AppColors.white,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
-                      const CircleAvatar(
-                        backgroundColor: AppColors.white,
-                        child: Icon(
-                          Icons.notifications,
-                          color: AppColors.black,
+                      InkWell(
+                        onTap: () {},
+                        child: const CircleAvatar(
+                          backgroundColor: AppColors.white,
+                          child: Icon(
+                            Icons.notifications,
+                            color: AppColors.black,
+                          ),
                         ),
                       ),
                     ],
@@ -74,9 +78,9 @@ class HomePage extends StatelessWidget {
                         height: 20,
                       ),
                       const SizedBox(width: 8),
-                      const Text(
+                      Text(
                         'TODAY’S SUMMARY',
-                        style: TextStyle(
+                        style: GoogleFonts.inter(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                           color: AppColors.black,
@@ -101,9 +105,9 @@ class HomePage extends StatelessWidget {
                           child: Text(
                             'Orders: 5',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
+                            style: GoogleFonts.inter(
                               fontSize: 14,
-                              fontWeight: FontWeight.w800,
+                              fontWeight: FontWeight.w500,
                               color: AppColors.black,
                             ),
                           ),
@@ -117,9 +121,9 @@ class HomePage extends StatelessWidget {
                           child: Text(
                             'Completed: 3',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
+                            style: GoogleFonts.inter(
                               fontSize: 14,
-                              fontWeight: FontWeight.w800,
+                              fontWeight: FontWeight.w500,
                               color: AppColors.black,
                             ),
                           ),
@@ -133,9 +137,9 @@ class HomePage extends StatelessWidget {
                           child: Text(
                             'Pending: 2',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
+                            style: GoogleFonts.inter(
                               fontSize: 14,
-                              fontWeight: FontWeight.w800,
+                              fontWeight: FontWeight.w500,
                               color: AppColors.black,
                             ),
                           ),
@@ -171,7 +175,7 @@ class _StatCard extends StatelessWidget {
       height: 80,
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 185, 231, 204),
+        color: AppColors.mintGreen,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -181,7 +185,7 @@ class _StatCard extends StatelessWidget {
             alignment: Alignment.topLeft,
             child: Text(
               title,
-              style: const TextStyle(
+              style: GoogleFonts.inter(
                 fontSize: 12,
                 color: AppColors.black,
                 fontWeight: FontWeight.w500,
@@ -193,7 +197,10 @@ class _StatCard extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: Text(
               value,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              style: GoogleFonts.inter(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         ],

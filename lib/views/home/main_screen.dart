@@ -3,7 +3,7 @@ import 'package:supermarket_deliveryagent_fe/core/theme/app_colors.dart';
 import 'package:supermarket_deliveryagent_fe/views/bottombar/bottomnavbar.dart';
 import 'package:supermarket_deliveryagent_fe/views/home/home_screen.dart';
 import 'package:supermarket_deliveryagent_fe/views/orders/order.dart';
-import 'package:supermarket_deliveryagent_fe/views/profile/test.dart';
+import 'package:supermarket_deliveryagent_fe/views/profile/profile.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});

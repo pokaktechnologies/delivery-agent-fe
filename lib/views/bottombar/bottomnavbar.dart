@@ -15,7 +15,7 @@ class BottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<_BottomBarItemModel> items = [
       _BottomBarItemModel(icon: Icons.home, text: 'Home'),
-      _BottomBarItemModel(icon: Icons.shopping_bag, text: 'Orders'),
+      _BottomBarItemModel(icon: Icons.shopping_cart, text: 'Orders'),
       _BottomBarItemModel(icon: Icons.person_outlined, text: 'Profile'),
     ];
 
