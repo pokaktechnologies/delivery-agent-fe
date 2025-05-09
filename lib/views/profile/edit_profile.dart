@@ -258,7 +258,12 @@ class _EditProfileScreenState extends State<EditProfilePage> {
           ),
           Padding(
             padding: const EdgeInsets.all(16),
-            child: CustomYellowButton(label: 'Save', onPressed: () {}),
+            child: CustomYellowButton(
+              label: 'Save',
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
           ),
         ],
       ),

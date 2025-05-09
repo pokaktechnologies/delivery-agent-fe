@@ -121,69 +121,74 @@ class ProcessingOrderCard extends StatelessWidget {
             ),
 
             const SizedBox(height: 12),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Icon(Icons.call),
-                  label: Text(
-                    "Call",
-                    style: GoogleFonts.inter(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: Icon(Icons.call),
+                    label: Text(
+                      "Call",
+                      style: GoogleFonts.inter(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6),
+                        side: BorderSide(color: AppColors.black),
+                      ),
+                      backgroundColor: AppColors.white,
+                      foregroundColor: AppColors.black,
                     ),
                   ),
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6),
-                      side: BorderSide(color: AppColors.black),
+                  SizedBox(width: 6),
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      pushNavigation(context, const DeliveryTrackingScreen());
+                    },
+                    icon: Icon(Icons.navigation),
+                    label: Text(
+                      "Navigate",
+                      style: GoogleFonts.inter(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                    backgroundColor: AppColors.white,
-                    foregroundColor: AppColors.black,
-                  ),
-                ),
-                ElevatedButton.icon(
-                  onPressed: () {
-                    pushNavigation(context, const DeliveryTrackingScreen());
-                  },
-                  icon: Icon(Icons.navigation),
-                  label: Text(
-                    "Navigate",
-                    style: GoogleFonts.inter(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6),
-                      side: BorderSide(color: AppColors.black),
-                    ),
-                    backgroundColor: AppColors.white,
-                    foregroundColor: AppColors.black,
-                  ),
-                ),
-                ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Icon(Icons.done),
-                  label: Text(
-                    "Delivered",
-                    style: GoogleFonts.inter(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6),
+                        side: BorderSide(color: AppColors.black),
+                      ),
+                      backgroundColor: AppColors.white,
+                      foregroundColor: AppColors.black,
                     ),
                   ),
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6),
-                      side: BorderSide(color: AppColors.black),
+                  SizedBox(width: 6),
+                  ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: Icon(Icons.done),
+                    label: Text(
+                      "Delivered",
+                      style: GoogleFonts.inter(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                    backgroundColor: AppColors.white,
-                    foregroundColor: AppColors.black,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6),
+                        side: BorderSide(color: AppColors.black),
+                      ),
+                      backgroundColor: AppColors.white,
+                      foregroundColor: AppColors.black,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

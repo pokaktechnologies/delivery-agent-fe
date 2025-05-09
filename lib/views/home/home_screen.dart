@@ -52,13 +52,21 @@ class HomePage extends StatelessWidget {
                       color: AppColors.white,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        _StatCard(title: 'Total Orders', value: '100'),
-                        _StatCard(title: 'Customer Rating', value: '4.7'),
-                        _StatCard(title: 'On-Time Delivery Rate', value: '95%'),
-                      ],
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: const [
+                          _StatCard(title: 'Total Orders', value: '100'),
+                          SizedBox(width: 10),
+                          _StatCard(title: 'Customer Rating', value: '4.7'),
+                          SizedBox(width: 10),
+                          _StatCard(
+                            title: 'On-Time Delivery Rate',
+                            value: '95%',
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],

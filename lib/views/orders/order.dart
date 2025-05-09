@@ -127,44 +127,6 @@ class OrdersPage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            // Container(
-            //   color: Colors.orange[100],
-            //   padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //     children: [
-            //       Text(
-            //         "Orders: 5",
-            //         textAlign: TextAlign.center,
-            //         style: GoogleFonts.inter(
-            //           fontSize: 14,
-            //           fontWeight: FontWeight.w500,
-            //           color: AppColors.black,
-            //         ),
-            //       ),
-            //       Container(height: 20, width: 1.5, color: AppColors.grey),
-            //       Text(
-            //         "Completed: 3",
-            //         textAlign: TextAlign.center,
-            //         style: GoogleFonts.inter(
-            //           fontSize: 14,
-            //           fontWeight: FontWeight.w500,
-            //           color: AppColors.black,
-            //         ),
-            //       ),
-            //       Container(height: 20, width: 1.5, color: AppColors.grey),
-            //       Text(
-            //         "Pending: 2",
-            //         textAlign: TextAlign.center,
-            //         style: GoogleFonts.inter(
-            //           fontSize: 14,
-            //           fontWeight: FontWeight.w500,
-            //           color: AppColors.black,
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
             Expanded(
               child: TabBarView(
                 children: [
