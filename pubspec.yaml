@@ -20,7 +20,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
-  flutter_launcher_icons: ^0.13.1   # ✅ Recommended: include this in dev_dependencies
+  flutter_launcher_icons: ^0.13.1  
 
 flutter:
   uses-material-design: true
@@ -32,7 +32,10 @@ flutter:
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/appicon.png"
+  image_path_android: "assets/appicon.png"
   adaptive_icon_background: "#27AE60"
   adaptive_icon_foreground: "assets/appicon.png"
-  remove_alpha_ios: true
+  image_path_ios: "assets/appicon.png"
+
+
+
