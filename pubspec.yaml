@@ -26,14 +26,14 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/appicon.png
+    - assets/appicons.png
     - assets/images/
 
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/appicon.png"
+  image_path: "assets/appicons.png"
   adaptive_icon_background: "#27AE60"
-  adaptive_icon_foreground: "assets/appicon.png"
+  adaptive_icon_foreground: "assets/appicons.png"
   remove_alpha_ios: true
 
