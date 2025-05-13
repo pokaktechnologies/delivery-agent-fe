@@ -26,16 +26,14 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/blackpokak.png
     - assets/images/
-    - assets/appicon.png
 
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path_android: "assets/appicon.png"
+  image_path: "assets/blackpokak.png"
   adaptive_icon_background: "#27AE60"
-  adaptive_icon_foreground: "assets/appicon.png"
-  image_path_ios: "assets/appicon.png"
-
-
+  adaptive_icon_foreground: "assets/blackpokak.png"
+  remove_alpha_ios: true
 
